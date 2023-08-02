@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="nav">
+            <img src="https://images.unsplash.com/photo-1611001716885-b3402558a62b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="">
+
+
+            <div class="links">
+                <a href="">HOME</a>
+                <a href="">ABOUT</a>
+                <a href="">SPECIFICATION</a>
+                <a href="">PRODUCTS</a>
+                <a href="">CONNECT</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <h1>THE <BR>REAL</BR>SOUND </h1>
+            </div>
+
+            <div class="right">
+                <p>Click here to listen</p>
+                <img src="play.png" alt="" id="icon">
+            </div>
+        </div>
+
+        <audio id="song">
+            <source src="music.mp3" type="audio/mp3">
+        </audio>
+
+        
+
+
+    </div>
+
+
+    <script>
+        const song = document.getElementById("song");
+        const icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(song.paused){
+                song.play();
+                icon.src = "pause.png";
+            }else{
+                song.pause();
+                icon.src= "play.png";
+            }
+        }
+    </script>
+    
+</body>
+</html>
